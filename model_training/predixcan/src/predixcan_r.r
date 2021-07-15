@@ -112,7 +112,7 @@ model_training<-function(main_dir,
   
   #load expression data
   print('INFO loading expression data ...')
-  exp_all<-read.table(paste0(expression_file_name),header = T,stringsAsFactors = F)  #keeps IID in genotype file match with IID in expression data
+  exp_all<-read.table(paste0(expression_file_name),header = T,stringsAsFactors = F, check.names = FALSE)  #keeps IID in genotype file match with IID in expression data
   #gene_list
   gene_list<-intersect(exp_all$geneid,anno$geneid)
   
